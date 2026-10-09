@@ -1,0 +1,7 @@
+@inproceedings{SLOPE,
+  title={SLOPE: Optimistic Potential Landscape Shaping for Model-based Reinforcement Learning},
+  author={Li, Yao-Hui and Wang, Zeyu and Li, Xin and Pang, Wei and Yuan, Yingfang and Chen, Zhengkun and Zhang, Boya and Islam, Riashat and Lamb, Alex and Zhang, Yonggang},
+  booktitle={Neural Information Processing Systems (NeurIPS)},
+  year={2026},
+  url={https://arxiv.org/abs/2602.03201}
+}

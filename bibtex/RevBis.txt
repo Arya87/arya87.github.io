@@ -1,0 +1,6 @@
+@article{RevBis,
+  title={Revisiting bisimulation metric for robust representations in reinforcement learning},
+  author={Zhang, Leiji and Wang, Zeyu and Li, Xin and Li, Yao-Hui},
+  journal={arXiv preprint arXiv:2507.18519},
+  year={2025}
+}

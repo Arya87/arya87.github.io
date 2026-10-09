@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Yao-Hui Li">
+    <meta name="description" content="Yao-Hui Li is a third-year Ph.D. student at Beijing Institute of Technology, interested in deep reinforcement learning, robot learning, and embodied intelligence.">
+    <meta property="og:title" content="Yao-Hui Li">
+    <meta property="og:description" content="Third-year Ph.D. student at Beijing Institute of Technology. Research interests: deep reinforcement learning, robot learning, and embodied intelligence.">
+    <meta property="og:image" content="https://arya87.github.io/files/me.jpg">
+    <meta property="og:url" content="https://arya87.github.io/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Yao-Hui Li">
+    <meta name="twitter:description" content="Third-year Ph.D. student at Beijing Institute of Technology. Research interests: deep reinforcement learning, robot learning, and embodied intelligence.">
+    <meta name="twitter:image" content="https://arya87.github.io/files/me.jpg">
+    <title>Yao-Hui Li</title>
+    <link rel="canonical" href="https://arya87.github.io/">
+    <link rel="icon" href="files/favicon.ico" sizes="32x32">
+    <link rel="icon" href="files/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="files/apple-touch-icon.png">
+    <link rel="manifest" href="files/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap">
+    <link rel="stylesheet" href="style.css?v=2.2">
+    <script>
+        var emailCopiedAt = 0;
+        function showToast(message) {
+            var toast = document.getElementById("toast");
+            toast.textContent = message;
+            toast.classList.add("visible");
+            clearTimeout(toast.timer);
+            toast.timer = setTimeout(function() { toast.classList.remove("visible"); }, 3000);
+        }
+        function copyText(text) {
+            if (navigator.clipboard && window.isSecureContext) {
+                return navigator.clipboard.writeText(text);
+            }
+            // Fallback for older mobile browsers without the async clipboard API
+            var ta = document.createElement("textarea");
+            ta.value = text;
+            ta.setAttribute("readonly", "");
+            ta.style.position = "fixed";
+            ta.style.opacity = "0";
+            document.body.appendChild(ta);
+            ta.select();
+            ta.setSelectionRange(0, text.length);
+            var ok = document.execCommand("copy");
+            document.body.removeChild(ta);
+            return ok ? Promise.resolve() : Promise.reject();
+        }
+        function emailMe() {
+            var address = ["lyh19970807", "163.com"].join("@");
+            copyText(address).then(function() {
+                emailCopiedAt = Date.now();
+                showToast("Email copied: " + address);
+            }).catch(function() {});
+            window.location.href = "mailto:" + address;
+        }
+        // On mobile, mailto switches to the mail app, so re-show the toast when the user returns
+        document.addEventListener("visibilitychange", function() {
+            if (document.visibilityState === "visible" && Date.now() - emailCopiedAt < 60000) {
+                showToast("Email copied: " + ["lyh19970807", "163.com"].join("@"));
+                emailCopiedAt = 0;
+            }
+        });
+        document.addEventListener("DOMContentLoaded", function() {
+            var header = document.querySelector(".header");
+            var nav = document.getElementById("sticky-nav");
+            var observer = new IntersectionObserver(function(entries) {
+                nav.classList.toggle("visible", !entries[0].isIntersecting);
+            }, {threshold: 0});
+            observer.observe(header);
+        });
+    </script>
+</head>
+<body>
+<nav class="sticky-nav noselect" id="sticky-nav">
+    <div class="sticky-nav-content">
+        <a class="sticky-nav-name bold" href="javascript:void(0);" onclick="window.scrollTo({top:0,behavior:'smooth'})">Yao-Hui Li</a>
+        <div class="sticky-nav-links">
+            <a href="javascript:void(0);" onclick="emailMe()">Email</a>
+            <a href="https://scholar.google.com/citations?user=tochFCMAAAAJ&amp;hl=en">Google Scholar</a>
+            <a href="https://github.com/Arya87">GitHub</a>
+        </div>
+    </div>
+</nav>
+<div class="header noselect">
+    <div class="header-div content row">
+        <div class="header-profile-picture"></div>
+        <div class="header-text">
+            <div class="header-name">
+                <h1>Yao-Hui Li (李耀辉)</h1>
+            </div>
+            <div class="header-subtitle">
+                Ph.D. student, School of Computer Science and Technology, BIT
+            </div>
+            <div class="header-links">
+                <a href="javascript:void(0);" onclick="emailMe()" title="lyh19970807@163.com">Email</a>
+                <a href="https://github.com/Arya87">GitHub</a>
+                <a href="https://scholar.google.com/citations?user=tochFCMAAAAJ&amp;hl=en">Google Scholar</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="content" style="padding-bottom: 64px;">
+    <div>
+        <p>
+            I am a third-year Ph.D. student in the <a href="https://cs.bit.edu.cn/">School of Computer Science and Technology</a> at <a href="https://english.bit.edu.cn/">Beijing Institute of Technology (BIT)</a>, advised by <a href="https://cs.bit.edu.cn/szdw/jsml/bssds/e0a7ea1ec73740e2ac05891eede79a10.htm">Xin Li</a>.
+        </p>
+        <p>
+            I received my master's degree from the <a href="https://mi.hbu.edu.cn/">College of Mathematics and Information Science</a> at <a href="https://en.hbu.cn/">Hebei University</a>, where I was advised by <a href="https://mi.hbu.edu.cn/article/667">Feng Zhang</a>. I was also a visiting scholar at the <a href="https://www.macs.hw.ac.uk/">School of Mathematical and Computer Sciences</a>, <a href="https://www.hw.ac.uk/">Heriot-Watt University</a>, hosted by <a href="https://pangwei.eu.org/">Wei Pang</a>.
+        </p>
+        <p>
+            My research interests lie in deep reinforcement learning, robot learning, and embodied intelligence, with a particular focus on sample-efficient representation learning and model-based control. I am also interested in integrating vision-language-action (VLA) models with reinforcement learning to develop generalizable robotic policies that connect multimodal perception with decision-making and action.
+        </p>
+    </div>
+    <div>
+        <h2 class="noselect">Publications and preprints</h2>
+        <p>Papers sorted by year. Representative papers are <span style="background-color: #e4d6f4">highlighted</span>. * represents equal contributions.</p>
+        <div class="highlight publication row">
+            <div class="row-media" style="background-image: url(files/GEAR.png);" role="img" aria-label="GEAR method overview"></div>
+            <div class="row-text">
+                <a class="publication-title bold">GEAR: Bridging the Planner-Actor Gap via Gradient-Aligned Policy Extraction</a><br/>
+                <span class="bold">Yao-Hui Li</span>, Xin Li, Hasnaa Bennis, Meiju Li, Boya Zhang, Yingfang Yuan, Wei Pang<br/>
+                <span class="italic">Neural Information Processing Systems (<a href="https://nips.cc/">NeurIPS</a>)</span>, 2026<br/>
+                <span class="italic">Coming soon</span><br/>
+            </div>
+        </div>
+
+        <div class="highlight publication row">
+            <div class="row-media" style="background-image: url(files/SLOPE.gif);" role="img" aria-label="SLOPE method overview"></div>
+            <div class="row-text">
+                <a class="publication-title bold" href="https://arxiv.org/abs/2602.03201">SLOPE: Optimistic Potential Landscape Shaping for Model-based Reinforcement Learning</a><br/>
+                <span class="bold">Yao-Hui Li*</span>, Zeyu Wang*, Xin Li, Wei Pang, Yingfang Yuan, Zhengkun Chen, Boya Zhang, Riashat Islam, Alex Lamb, Yonggang Zhang<br/>
+                <span class="italic">Neural Information Processing Systems (<a href="https://nips.cc/">NeurIPS</a>)</span>, 2026<br/>
+                <a class="btn" href="https://arxiv.org/abs/2602.03201">paper</a> / <a class="btn" href="bibtex/SLOPE.txt">bibtex</a>
+            </div>
+        </div>
+        <div class="publication row">
+            <div class="row-media" style="background-image: url(files/WISDOM.png);" role="img" aria-label="WISDOM method overview"></div>
+            <div class="row-text">
+                <a class="publication-title bold" href="https://proceedings.iclr.cc/paper_files/paper/2026/file/2026e37f9e9a65f7f9cae0f367214674-Paper-Conference.pdf">Wavelet Predictive Representations for Non-Stationary Reinforcement Learning</a><br/>
+                Min Wang, Xin Li, Ye He, <span class="bold">Yao-Hui Li</span>, Hasnaa Bennis, Riashat Islam, Mingzhong Wang<br/>
+                <span class="italic">International Conference on Learning Representations (ICLR)</span>, 2026<br/>
+                <a class="btn" href="https://proceedings.iclr.cc/paper_files/paper/2026/file/2026e37f9e9a65f7f9cae0f367214674-Paper-Conference.pdf">paper</a> / <a class="btn" href="https://github.com/MinWangcs/WISDOM">code</a> / <a class="btn" href="bibtex/WISDOM.txt">bibtex</a>
+            </div>
+        </div>
+        <div class="highlight publication row">
+            <div class="row-media" style="background-image: url(files/MFSC.png);" role="img" aria-label="MFSC method overview"></div>
+            <div class="row-text">
+                <a class="publication-title bold" href="https://proceedings.mlr.press/v267/wang25ay.html">Learning Fused State Representations for Control from Multi-View Observations</a><br/>
+                Zeyu Wang*, <span class="bold">Yao-Hui Li*</span>, Xin Li, Hongyu Zang, Romain Laroche, Riashat Islam<br/>
+                <span class="italic">International Conference on Machine Learning (ICML)</span>, 2025<br/>
+                <a class="btn" href="https://proceedings.mlr.press/v267/wang25ay.html">paper</a> / <a class="btn" href="https://github.com/zpwdev/MFSC">code</a> / <a class="btn" href="bibtex/MFSC.txt">bibtex</a>
+            </div>
+        </div>
+        <div class="publication row">
+            <div class="row-media" style="background-image: url(files/RevBis.png);" role="img" aria-label="RevBis method overview"></div>
+            <div class="row-text">
+                <a class="publication-title bold" href="https://arxiv.org/abs/2507.18519">Revisiting Bisimulation Metric for Robust Representations in Reinforcement Learning</a><br/>
+                Leiji Zhang, Zeyu Wang, Xin Li, <span class="bold">Yao-Hui Li</span><br/>
+                <span class="italic">arXiv preprint</span>, 2025<br/> 
+                <a class="btn" href="https://arxiv.org/abs/2507.18519">paper</a> / <a class="btn" href="bibtex/RevBis.txt">bibtex</a>
+            </div>
+        </div>
+        <div class="highlight publication row">
+            <div class="row-media" style="background-image: url(files/RMPC.png);" role="img" aria-label="RMPC method overview"></div>
+            <div class="row-text">
+                <a class="publication-title bold" href="https://www.sciencedirect.com/science/article/pii/S156849462500688X">Regularizing Model Predictive Control for pixel-based long-horizon tasks</a><br/>
+                <span class="bold">Yao-Hui Li</span>, Feng Zhang, Qiang Hua, Chun-Ru Dong<br/>
+                <span class="italic">Applied Soft Computing</span>, 2025<br/>
+                <a class="btn" href="https://doi.org/10.1016/j.asoc.2025.113377">paper</a> / <a class="btn" href="https://github.com/Arya87/RMPC">code</a> / <a class="btn" href="bibtex/RMPC.txt">bibtex</a>
+            </div>
+        </div>
+        <div class="highlight publication row">
+            <div class="row-media" style="background-image: url(files/HI-FER.jpg);" role="img" aria-label="HI-FER method overview"></div>
+            <div class="row-text">
+                <a class="publication-title bold" href="https://www.sciencedirect.com/science/article/pii/S0950705124004167">Integrating human learning and reinforcement learning: A novel approach to agent training</a><br/>
+                <span class="bold">Yao-Hui Li</span>, Feng Zhang, Qiang Hua, Xiao-Hua Zhou<br/>
+                <span class="italic">Knowledge-Based Systems</span>, 2024<br/>
+                <a class="btn" href="https://doi.org/10.1016/j.knosys.2024.111782">paper</a> / <a class="btn" href="https://github.com/Arya87/HI-FER">code</a> / <a class="btn" href="bibtex/HI-FER.txt">bibtex</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div id="toast" class="toast noselect" role="status" aria-live="polite"></div>
+<div class="footer noselect">
+    <div class="footer-content">
+        &copy; 2026 Yao-Hui Li. Template adapted from <a href="https://github.com/nicklashansen/nicklashansen.github.io">Nicklas Hansen</a>.
+    </div>
+</div>
+</body>
+</html>

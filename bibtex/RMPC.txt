@@ -1,0 +1,13 @@
+@article{RMPC,
+title = {Regularizing Model Predictive Control for pixel-based long-horizon tasks},
+journal = {Applied Soft Computing},
+volume = {181},
+pages = {113377},
+year = {2025},
+issn = {1568-4946},
+doi = {https://doi.org/10.1016/j.asoc.2025.113377},
+url = {https://www.sciencedirect.com/science/article/pii/S156849462500688X},
+author = {Yao-Hui Li and Feng Zhang and Qiang Hua and Chun-Ru Dong},
+keywords = {Model-based reinforcement learning, Data regularization, Model Predictive Control, Sample efficiency},
+abstract = {Planning has been proven to be an effective strategy for dealing with complex tasks in environments. However, due to the constraints of computational budget and the accumulated model biases, planning for pixel-based long horizon tasks with limited samples remains a great challenge. To address this issue, a Regularized Model Predictive Control (RMPC) was proposed in this study. RMPC performs trajectory optimization using short-term reward estimates and long-term return estimates, which avoids the high burden of long-horizon planning. Additionally, an implicit regularization mechanism is employed to improve the robustness of the generated environment model and reliability of the value function estimation, which helps to reduce the risk of accumulated model biases. Extensive comparison experiments and ablation studies are performed on the benchmark datasets for evaluating the proposed RMPC. And empirical results show that RMPC outperforms the previous SOTA algorithms in terms of sample-efficiency (20.88% performance improvement) and model stability (56.39% standard deviation reduction) on pixel-based continuous control tasks from DMControl-100k benchmark. Our code is available at: https://github.com/Arya87/RMPC.}
+}

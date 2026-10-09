@@ -1,0 +1,13 @@
+@article{HI-FER,
+title = {Integrating human learning and reinforcement learning: A novel approach to agent training},
+journal = {Knowledge-Based Systems},
+volume = {294},
+pages = {111782},
+year = {2024},
+issn = {0950-7051},
+doi = {https://doi.org/10.1016/j.knosys.2024.111782},
+url = {https://www.sciencedirect.com/science/article/pii/S0950705124004167},
+author = {Yao-Hui Li and Feng Zhang and Qiang Hua and Xiao-Hua Zhou},
+keywords = {Experience replay, Reinforcement learning, Off-policy, Sample efficiency},
+abstract = {Off-policy reinforcement learning (RL) algorithms are known for improving sample efficiency by employing prior experiences in experience replay memory. However, most existing off-policy RL algorithms are bottlenecked by the slow convergence speed and demand of a large number of interaction samples. In contrast, on-policy RL algorithms converge fast and continuously generate new samples. However, their success heavily depends on the accuracy of the generated samples. To address these challenges, a novel RL framework called HI-FER (Human-learning Inspired Frequent Experience Replay) is proposed by mimicking the process of human learning. HI-FER employs a parallelized experience replay and repetitive training framework to expedite the convergence rate of off-policy algorithms, which imitates the function of the human brain’s parallel information processing and repetitive learning. Additionally, a periodic network reset strategy and dynamic memory updating are leveraged by imitating the forgetting mechanism of humans to prevent overfitting triggered by repetitive updating on limited experiences. Extensive comparison experiments and ablation studies are performed on benchmark environments to evaluate the proposed method. The empirical results demonstrate that HI-FER outperforms the baselines in terms of sample efficiency on state-based (14% improvements) and image-based (51% improvements) tasks from DMControl. Project website and code: https://github.com/Arya87/HI-FER.}
+}
